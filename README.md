@@ -1,3 +1,3 @@
 A colorful timer.
 
-Demo:(Demo)[]
+Demo:(Demo)[https://superyngo.github.io/timer_vue3/]
