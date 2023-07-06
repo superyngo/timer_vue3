@@ -1,0 +1,100 @@
+:root {
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherited;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100svh;
+  position: relative;
+}
+
+.full-block {
+  position: absolute;
+  inset: 0;
+}
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+#app {
+  height: 150%;
+  width: 150%;
+  transform: translateX(-25%) translateY(-10%);
+  background-color: rgba(174, 180, 91, 0.499);
+  border-radius: 1rem;
+  /* border: 5px solid black; */
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+#timer > span {
+  font-size: 3rem;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: gradient 2s linear infinite;
+  animation-play-state: paused;
+}
+
+#timer > span.spin {
+  animation-play-state: running;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

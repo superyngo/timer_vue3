@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- "defer" means that the DOM gets loaded before the script is executed -->
+    <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <!-- make the page responsive (though I don't always want this) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>vue 3 template</title>
+  </head>
+  <body>
+    <main class="full-block">
+      <image src="./assets/holly-booth-xRtBXEcEjDQ-unsplash.jpg"></image>
+      <div class="container">
+        <div id="app">
+          <h1>阿舅計時器</h1>
+          <div id="timer">
+            <span :class="{spin:isSpin}">
+              {{time[0].toString().padStart(2, "0")}}:
+              {{time[1].toString().padStart(2, "0")}}.
+              {{time[2].toString().padStart(2, "0")}}
+            </span>
+          </div>
+          <button id="startBtn" @click="startBtn">
+            {{timer_states[startBtnState]}}
+          </button>
+          <button
+            id="resetBtn"
+            :disabled="resetBtnisDisabled"
+            @click="timerFunction(3)"
+          >
+            重設
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
