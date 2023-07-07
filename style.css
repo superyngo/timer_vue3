@@ -20,10 +20,6 @@ video {
   font: inherited;
 }
 
-html {
-  color-scheme: dark light;
-}
-
 body {
   min-height: 100svh;
   background-color: #fff0df;
